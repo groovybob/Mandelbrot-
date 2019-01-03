@@ -6,7 +6,7 @@ import numpy as np
 # set up an array of real numbers between -2+-1j and 2+~2j
 
 size = int(input("how many numbers would you like to use?"))
-# notes 
+# notes
 #randomly generate complex mumbers and assess if fit in BMset
 sets = np.array([])
 for n in range(size):
@@ -15,9 +15,15 @@ for n in range(size):
     complex_num = complex(rand1,rand2)
     #print(complex_num)
 
+    while -100<n<100:
+        complex_num_test = complex_num
+        for i in range (30):
+            complex_num_test = complex_num_test^2 + complex_num
+            n = complex_num_test
+        sets = np.append(sets, complex_num_test)
 
 
-    sets = np.append(sets,complex_num)
+
 
 
 print(sets)
