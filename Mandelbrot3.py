@@ -16,12 +16,12 @@ columns = 2000
 rows = 2000
 
 result = np.zeros([rows, columns])
-for row_index, Re in enumerate(np.linspace(-1.79,-1.59,num=rows)):
+for row_index, Re in enumerate(np.linspace(-1.79,-1.78,num=rows)):
     for columns_index, Im in enumerate(np.linspace(-0.02,0.02,num=columns)):
-        result[row_index, columns_index] = Mandelbrot(Re , Im , 100)
+        result[row_index, columns_index] = Mandelbrot(Re , Im , 1000)
 
 plt.figure(dpi=100)
-plt.imshow(result.T, cmap = 'hot', interpolation='bilinear', extent=[-1.79,-1.75,-0.02,0.02])
+plt.imshow(result.T, cmap = 'hot', interpolation='bilinear', extent=[-1.79,-1.78,-0.02,0.02])
 plt.savefig('image1.jpg', format='png', dpi=1000)
 plt.show()
 
