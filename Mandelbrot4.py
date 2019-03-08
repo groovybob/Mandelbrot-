@@ -14,6 +14,7 @@ def mandelbrot(Re, Im, max_iter ):
     return max_iter
 
 
+for n in range(10)
 columns = 2000
 rows = 2000
 
@@ -29,4 +30,11 @@ plt.imshow(result.T, cmap='hsv', interpolation='bilinear', extent=[-2, 1, -1, 1]
 plt.savefig('image1.jpg', format='png', dpi=1000)
 plt.show()
 
+fig.canvas.mpl_connect('pick_event', onpick2)
 
+def plotloop(X, Y)
+
+
+
+
+fig.canvas.mpl_connect('pick_event', onpick2)
